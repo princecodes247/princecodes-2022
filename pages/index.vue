@@ -19,7 +19,7 @@
     <section class="">
       <div class="">
         <div class="">
-          <img src="../static/showcase.webp" alt="">
+          <!-- <img src="../static/showcase.webp" alt=""> -->
         </div>
         <div class="">
           <div class="">
@@ -31,7 +31,7 @@
       </div>
       <div class="">
         <div class="">
-          <img src="../static/showcase.webp" alt="">
+          <!-- <img src="../static/showcase.webp" alt=""> -->
         </div>
         <div class="">
           <div class="">
