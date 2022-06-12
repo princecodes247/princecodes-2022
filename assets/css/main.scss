@@ -1,0 +1,30 @@
+*,*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sect {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &--hero {
+        // background-image: url('/assets/img/hero.jpg');
+    }
+    &--about {
+        // background-image: url('/assets/img/about.jpg');
+    }
+}
