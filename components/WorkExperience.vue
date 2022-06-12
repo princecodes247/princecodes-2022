@@ -1,13 +1,12 @@
 
 <template>
-  <div class="">
-    <div class="">
-      <div @click="changeSelectedJob" class="" v-for="job in Object.keys(jobs)">
+  <div class="experience__list">
+    <div class="experience_companies">
+      <div :class="{ active: selectedJob === job }" class="experience_company" @click="changeSelectedJob" v-for="job in Object.keys(jobs)">
         {{ job }}
       </div>
     </div>
-    <div class="">
-      <div class="" >
+      <div class="experience__description" >
         <h4>
             {{ jobs[selectedJob].title }}
             @{{ selectedJob }}
@@ -21,7 +20,6 @@
         </p>
         </div>
       </div>
-    </div>
   </div>
 </template>
 <style>

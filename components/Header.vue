@@ -1,9 +1,9 @@
 
 <template>
-  <header class="">
+  <header class="header">
     <div>Prince</div>
 
-    <div class="">
+    <div class="header--links">
       <div class="">home</div>
     <div class="">About</div>
     <div class="">Contact</div>

@@ -1,66 +1,66 @@
 <template>
-  <main class="">
-    <aside class="">Indicator</aside>
+  <main class="dark main">
+    <aside class="indicator">Indicator</aside>
   <article class="">
     <Header/>
-  <section class="">
+  <section class="sect sect--hero">
     <div class="">
       <p class="">Gbalam Prince</p>
     <h1 class="">Full Stack Developer</h1>
     </div>
-    <div class="">
+    <div class="bubbles">
       <div class="">G</div>
       <div class="">G</div>
       <div class="">L</div>
     </div>
   </section>
-  <section class="">
+  <section class="sect sect--projects">
     <h2 class="">Selected Projects</h2>
-    <section class="">
-      <div class="">
-        <div class="">
+    <div class="projects">
+      <div class="project">
+        <div class="project__image">
           <!-- <img src="../static/showcase.webp" alt=""> -->
         </div>
-        <div class="">
+        <div class="project__details">
           <div class="">
             <h3 class="">Project 1</h3>
         <p>Description</p>
           </div>
-          <button class=""></button>
+          <button class="">B</button>
         </div>
       </div>
-      <div class="">
-        <div class="">
+      <div class="project">
+        <div class="project__image">
           <!-- <img src="../static/showcase.webp" alt=""> -->
         </div>
-        <div class="">
+        <div class="project__details">
           <div class="">
             <h3 class="">Project 1</h3>
         <p>Description</p>
           </div>
-          <button class=""></button>
+          <button class="">B</button>
         </div>
       </div>
-    </section>
+    </div>
   </section>
-  <section class="">
+  <section class="sect sect--about">
     <p class="">I have a passion for creating user experiences that are seamless, meaningful and impactful.</p>
     <h2>About me</h2>
     <div class="">
       a
     </div>
   </section>
-  <section class="">
+  <section class="sect sect--experience">
     <h2 class="">Work Experience</h2>
     <WorkExperience/>
   </section>
-  <section class="">
+  <section class="sect sect--more-works">
     <h2 class="">More Works</h2>
     <MoreWorks />
   </section>
-  <section>
+  <section class="sect sect--contact">
     <h2>Let's work together</h2>
-    <p>I am currently looking for a job in the field of Full Stack Development.</p>
+    <p>asdmao</p>
     <a>Write an Email</a>
     <form action="">
       
