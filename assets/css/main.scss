@@ -8,118 +8,150 @@ $primary-cover-color: #fff2;
 $secondary-cover-color: #ff9800;
 $text-color: #212121;
 
-
-*,*::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1{
-    font-size: 5.5rem;
-    // font-weight: 700;
-    margin-bottom: 1rem;
+h1 {
+  font-size: 5.5rem;
+  // font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .dark.main {
-    $primary-bg-color: #030303;
-    $text-color: #fafafa;
-    background-color: $primary-bg-color;
-    color: $text-color;
+  $primary-bg-color: #030303;
+  $text-color: #fafafa;
+  background-color: $primary-bg-color;
+  color: $text-color;
 }
-
 
 .main {
-    display: flex;
-    // flex-direction: column;
+  display: flex;
+  // flex-direction: column;
 
-    background-color: $primary-bg-color;
-    color: $text-color;
+  background-color: $primary-bg-color;
+  color: $text-color;
 }
 
-
-
-
 .indicator {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  height: 10vh;
+
+  &--links {
     display: flex;
     align-items: center;
-    padding: 1em;
-    height: 10vh;
-
-    &--links {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-    }
+    gap: 1em;
+  }
 }
 
 .sect {
-    // flex-direction: column;
-    // justify-content: center;
-    padding: 3em;
-    width: 100%;
-    
-    &--hero {
-        display: flex;
-        // background-image: url('/assets/img/hero.jpg');
-        align-items: center;
-        // height: 100vh;
-        height: 90vh;
-        .bubbles {
-            display: flex;
-            gap: 1em;
-        }
+  // flex-direction: column;
+  // justify-content: center;
+  padding: 3em;
+  width: 100%;
+
+  &--hero {
+    display: flex;
+    // background-image: url('/assets/img/hero.jpg');
+    align-items: center;
+    // height: 100vh;
+    height: 90vh;
+    .bubbles {
+      display: flex;
+      gap: 1em;
     }
-    &--projects {
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1em;
-            min-height: 80vh;
-        }
+  }
+  &--projects {
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+      min-height: 80vh;
     }
-    &--about {
-        // background-image: url('/assets/img/about.jpg');
-        text-align: center;
-    }
+  }
+  &--about {
+    // background-image: url('/assets/img/about.jpg');
+    text-align: center;
+  }
 }
 
 .project {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.project__image {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  &:hover &__button::before {
+    transform: scale(1);
+    // display: none;
+  }
+  &__image {
     width: 100%;
     height: 100%;
     padding: 1em;
     background: $primary-cover-color;
     object-fit: cover;
-    flex: 1;    
-}
-
-.project__details {
+    flex: 1;
+  }
+  &__details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    margin-top: 1em;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    $size: 48px;
+    width: $size;
+    height: $size;
+    background: red;
+    position: relative;
+    border-radius: 999px;
+
+    &::before {
+      content: "";
+      border-radius: 999px;
+      width: 100%;
+      height: 100%;
+      background: green;
+      position: absolute;
+      top: 0;
+      left: 0;
+      // opacity: 0;
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1em;
+      z-index: 0;
+      //   background: $secondary-cover-color;
+    }
+  }
 }
 
 
@@ -130,49 +162,60 @@ h2 {
 // }
 
 .experience__list {
-    display: flex;
-    gap: 1em;
+  display: flex;
+  gap: 1em;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 5em;
 }
 .experience__companies {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 .experience_company {
-    padding: 0.5em;
-    cursor: pointer;
-    border-bottom: 1px solid transparent;
-    &:hover {
-        background: $primary-cover-color;
-    }
-    &.active {
-        border-bottom: 1px solid $primary-color;
-    }
+  padding: 0.5em;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    background: $primary-cover-color;
+  }
+  &.active {
+    border-bottom: 1px solid $primary-color;
+  }
 }
-.experience_description{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+.experience__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 600px;
+  // background: red;
 }
 .more_works {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 70%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+      
 }
 
 .more_works__item {
-    display: flex;
-    // flex-direction: column;
-     border-bottom: 1px solid $text-color;
-    align-items: center;
-    padding: 1em 0;
-    text-transform: capitalize;
-    justify-content: space-between;
+  display: flex;
+  // flex-direction: column;
+  border-bottom: 1px solid $text-color;
+  align-items: center;
+  padding: 1em 0;
+  text-transform: capitalize;
+  justify-content: space-between;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }

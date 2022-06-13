@@ -26,7 +26,7 @@
             <h3 class="">Project 1</h3>
         <p>Description</p>
           </div>
-          <button class="">B</button>
+          <a class="project__button" href="/">B</a>
         </div>
       </div>
       <div class="project">
@@ -38,7 +38,7 @@
             <h3 class="">Project 1</h3>
         <p>Description</p>
           </div>
-          <button class="">B</button>
+          <a class="project__button" href="/">B</a>
         </div>
       </div>
     </div>
