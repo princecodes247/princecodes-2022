@@ -24,6 +24,9 @@ h1 {
   font-size: 5.5rem;
   // font-weight: 700;
   margin-bottom: 1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 h2 {
@@ -45,12 +48,18 @@ h2 {
 
   background-color: $primary-bg-color;
   color: $text-color;
+  > * {
+    z-index: 2;
+  }
 }
 
 .indicator {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    // display: none;
+  }
 }
 
 .header {
@@ -65,6 +74,27 @@ h2 {
     align-items: center;
     gap: 1em;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 1em 0.4em;
+  }
+}
+
+.main_background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  &__shape {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    // border: 14px solid green;
+  }
 }
 
 .sect {
@@ -72,16 +102,57 @@ h2 {
   // justify-content: center;
   padding: 3em;
   width: 100%;
+  margin-top: 2em;
 
   &--hero {
     display: flex;
     // background-image: url('/assets/img/hero.jpg');
     align-items: center;
     // height: 100vh;
-    height: 90vh;
-    .bubbles {
+    height: 89vh;
+    // background: red;
+    position: relative;
+    margin-top: 0;
+    > * {
+      z-index: 2;
+    }
+    &__bubble {
+      z-index: 0;
+      --size: 8rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px dashed rgba(250, 250, 250, 0.2);
+      border-radius: 9999px;
+      animation: bubble-animation 1s ease-in-out infinite;
       display: flex;
-      gap: 1em;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(45deg);
+      transition: 400ms ease-in-out;
+      &:nth-child(1) {
+        left: unset;
+        right: 4%;
+        --size: 16rem;
+        top: 0;
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        left: 10%;
+        --size: 10rem;
+        top: unset;
+        bottom: 10%;
+        animation-delay: 0s;
+      }
+      width: var(--size);
+      height: var(--size);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 1px dashed rgba(250, 250, 250, 0.3);
+        // --size: 4rem;
+        transform: rotate(0deg);
+      }
     }
   }
   &--projects {
@@ -91,9 +162,29 @@ h2 {
       gap: 1em;
       min-height: 80vh;
     }
+
+    @media screen and (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
   }
   &--about {
     // background-image: url('/assets/img/about.jpg');
+    text-align: center;
+    &__details {
+      font-size: 2rem;
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 1em 0.4em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
 }
@@ -106,6 +197,11 @@ h2 {
   &:hover &__button::before {
     transform: scale(1);
     // display: none;
+  }
+  &:hover {
+    svg {
+      transform: rotate(0deg);
+    }
   }
   &__image {
     width: 100%;
@@ -130,7 +226,18 @@ h2 {
     background: red;
     position: relative;
     border-radius: 999px;
-
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    svg {
+      transition: 200ms ease-in-out;
+      transform: rotate(-30deg);
+      position: relative;
+      z-index: 4;
+    }
     &::before {
       content: "";
       border-radius: 999px;
@@ -154,8 +261,6 @@ h2 {
   }
 }
 
-
-
 // .test {
 //     background: #000;
 //     padding: 3em;
@@ -167,6 +272,7 @@ h2 {
   margin: 0 auto;
   justify-content: center;
   margin-top: 5em;
+  align-items: center;
 }
 .experience__companies {
   display: flex;
@@ -177,6 +283,7 @@ h2 {
   padding: 0.5em;
   cursor: pointer;
   border-bottom: 1px solid transparent;
+  text-align: left;
   &:hover {
     background: $primary-cover-color;
   }
@@ -189,6 +296,9 @@ h2 {
   flex-direction: column;
   gap: 1em;
   max-width: 600px;
+  p {
+    text-align: left;
+  }
   // background: red;
 }
 .more_works {
@@ -200,7 +310,6 @@ h2 {
   @media screen and (max-width: 768px) {
     width: 100%;
   }
-      
 }
 
 .more_works__item {
@@ -218,4 +327,9 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 1em;
+}
+
+.scroll_indicator {
+  position: absolute;
+  bottom: 2rem;
 }
