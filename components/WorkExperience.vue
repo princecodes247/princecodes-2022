@@ -1,25 +1,30 @@
 
 <template>
   <div class="experience__list">
-    <div class="experience_companies">
-      <div :class="{ active: selectedJob === job }" class="experience_company" @click="changeSelectedJob" v-for="job in Object.keys(jobs)">
+    <div class="experience__companies">
+      <div
+        :class="{ active: selectedJob === job }"
+        class="experience__company"
+        @click="changeSelectedJob"
+        v-for="job in Object.keys(jobs)"
+      >
         {{ job }}
       </div>
     </div>
-      <div class="experience__description" >
-        <h4>
-            {{ jobs[selectedJob].title }}
-            @{{ selectedJob }}
-        </h4>
-        <h5>
-            {{ jobs[selectedJob].date }}
-        </h5>
-        <div class="">
-            <p v-for="point in jobs[selectedJob].points">
-        {{ point }}
+    <div class="experience__description">
+      <h4>
+        {{ jobs[selectedJob].title }}
+        @{{ selectedJob }}
+      </h4>
+      <h5>
+        {{ jobs[selectedJob].date }}
+      </h5>
+      <div class="">
+        <p v-for="point in jobs[selectedJob].points">
+          {{ point }}
         </p>
-        </div>
       </div>
+    </div>
   </div>
 </template>
 <style>
@@ -30,16 +35,15 @@
 export default {
   name: "WorkExperience",
   methods: {
-  changeSelectedJob(event) {
-    this.selectedJob = event.target.innerText;
-  }
+    changeSelectedJob(event) {
+      this.selectedJob = event.target.innerText;
+    },
   },
   data() {
     return {
-        selectedJob: "AstroSoft",
+      selectedJob: "AstroSoft",
       jobs: {
-          
-        "AstroSoft": {
+        AstroSoft: {
           title: "Full Stack Developer",
           date: "2020 - Present",
           points: [
@@ -48,7 +52,7 @@ export default {
             "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more",
           ],
         },
-          "AyaweiSoft":{
+        AyaweiSoft: {
           title: "Full Stack Developer",
           date: "2019 - 2020",
           points: [
@@ -57,7 +61,7 @@ export default {
             "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more",
           ],
         },
-          "Eddify": {
+        Eddify: {
           title: "Full Stack Developer",
           date: "2018 - 2019",
           points: [
@@ -66,7 +70,7 @@ export default {
             "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more",
           ],
         },
-          "Uneleap.inc": {
+        "Uneleap.inc": {
           title: "Full Stack Developer",
           date: "2017 - 2018",
           points: [
@@ -75,7 +79,7 @@ export default {
             "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more",
           ],
         },
-          "Trident.inc": {
+        "Trident.inc": {
           title: "Full Stack Developer",
           date: "2016 - 2017",
           points: [
@@ -84,7 +88,7 @@ export default {
             "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more",
           ],
         },
-          "3reen": {
+        "3reen": {
           title: "Full Stack Developer",
           date: "2015 - 2016",
           points: [
@@ -93,7 +97,6 @@ export default {
             "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more",
           ],
         },
-      
       },
     };
   },

@@ -1,35 +1,34 @@
 
 <template>
-    <div class="more_works">
-        <div class="more_works__item" v-for="work in works">
-            <div class="more_works__item__title">
-                <h5>{{work.title}}</h5>
-            </div>
-            <div class="more_works__item__date">
-                <p>{{work.date}}</p>
-            </div>
-            <!-- <div class="more_works__item__points">
+  <div :[attributeName]="url" class="more_works">
+    <div class="more_works__item" v-for="work in works">
+      <div class="more_works__item__title">
+        <h5>{{ work.title }}</h5>
+      </div>
+      <div class="more_works__item__date">
+        <p>{{ work.date }}</p>
+      </div>
+      <!-- <div class="more_works__item__points">
                 <ul>
                     <li v-for="point in jobs[selectedJob].points">
                         <p>{{point}}</p>
                     </li>
                 </ul>
             </div> -->
-        </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "MoreWorks",
   methods: {
-  showCover(event) {
-    // this.selectedJob = event.target.innerText;
-  }
+    showCover(event) {
+      // this.selectedJob = event.target.innerText;
+    },
   },
   data() {
     return {
-        
       works: [
         {
           title: "CloudPay",

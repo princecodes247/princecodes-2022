@@ -15,6 +15,9 @@
         </div>
         <div class="scroll_indicator">Scroll down</div>
       </section>
+      <MouseTracker v-slot="{ x, y }">
+        Mouse is at: {{ x }}, {{ y }}
+      </MouseTracker>
       <section class="sect sect--projects">
         <h2 class="">Selected Projects</h2>
         <div class="projects">
