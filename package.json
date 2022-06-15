@@ -17,6 +17,7 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-fonts": "^2.0.0",
     "sass": "^1.52.3",
     "sass-loader": "10"
   }
