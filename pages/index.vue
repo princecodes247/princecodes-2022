@@ -10,8 +10,10 @@
           <div class="sect--hero__bubble">L</div>
         </div>
         <div class="">
-          <p class="">Gbalam Prince</p>
-          <h1 class="">Full Stack Developer</h1>
+          <p class="hero__name">Gbalam Prince</p>
+          <h1 class="hero__title">
+            Full Stack <span class="highlight">Developer</span>
+          </h1>
         </div>
         <div class="scroll_indicator">Scroll down</div>
       </section>
@@ -23,10 +25,10 @@
         <div class="projects">
           <div class="project" v-for="project in projects">
             <div class="project__image">
-              <!-- <img src="../static/showcase.webp" alt=""> -->
+              <img src="~assets/projects/veldora.png" alt="" />
             </div>
             <div class="project__details">
-              <div class="">
+              <div class="project__text">
                 <h3 class="">{{ project.name }}</h3>
                 <p>{{ project.desc }}</p>
               </div>
@@ -49,13 +51,13 @@
           </div>
         </div>
       </section>
-      <section class="sect sect--about">
+      <section class="sect sect--about" id="about">
         <p class="sect--about__details">
           I have a passion for creating user experiences that are seamless,
           meaningful and impactful.
         </p>
         <h2>About me</h2>
-        <div class="">a</div>
+        <a href="#contact" class="bubble_link">Say hi</a>
       </section>
       <section class="sect sect--experience">
         <h2 class="">Work Experience</h2>
@@ -65,7 +67,7 @@
         <h2 class="">More Works</h2>
         <MoreWorks />
       </section>
-      <section class="sect sect--contact">
+      <section class="sect sect--contact" id="contact">
         <h2>Let's work together</h2>
         <div class="sect--contact__options">
           <div class="sect--contact__links">
