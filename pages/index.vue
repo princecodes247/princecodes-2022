@@ -192,11 +192,11 @@ export default {
       projects: [
         {
           name: "Veldora",
-          desc: "A showcase of my work",
+          desc: "A PaaS (Platform as a Service) for managing your form and email data.",
         },
         {
           name: "Glassmorphism Generator",
-          desc: "A showcase of my work",
+          desc: "A dev tool for generating glassmorphism shapes.",
         },
       ],
     };
