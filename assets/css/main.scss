@@ -95,17 +95,30 @@ aside {
   justify-content: space-between;
   padding: 1em;
   height: 10vh;
+  position: relative;
+  z-index: 5;
   .logo {
     font-family: Syne, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
   }
   &--links {
     display: flex;
     align-items: center;
     gap: 1em;
+    text-transform: lowercase;
+    > * {
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
     padding: 1em 0.4em;
+    gap: 1em;
+    flex-direction: column;
   }
 }
 

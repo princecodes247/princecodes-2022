@@ -15,50 +15,36 @@
         </div>
         <div class="scroll_indicator">Scroll down</div>
       </section>
-      <MouseTracker v-slot="{ x, y }">
+      <!-- <MouseTracker v-slot="{ x, y }">
         Mouse is at: {{ x }}, {{ y }}
-      </MouseTracker>
+      </MouseTracker> -->
       <section class="sect sect--projects">
         <h2 class="">Selected Projects</h2>
         <div class="projects">
-          <div class="project">
+          <div class="project" v-for="project in projects">
             <div class="project__image">
               <!-- <img src="../static/showcase.webp" alt=""> -->
             </div>
             <div class="project__details">
               <div class="">
-                <h3 class="">Project 1</h3>
-                <p>Description</p>
+                <h3 class="">{{ project.name }}</h3>
+                <p>{{ project.desc }}</p>
               </div>
               <a class="project__button" href="/">
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
               </a>
-            </div>
-          </div>
-          <div class="project">
-            <div class="project__image">
-              <!-- <img src="../static/showcase.webp" alt=""> -->
-            </div>
-            <div class="project__details">
-              <div class="">
-                <h3 class="">Project 1</h3>
-                <p>Description</p>
-              </div>
-              <a class="project__button" href="/">B</a>
             </div>
           </div>
         </div>
@@ -83,10 +69,10 @@
         <h2>Let's work together</h2>
         <div class="sect--contact__options">
           <div class="sect--contact__links">
-            <a href="www.github.com/princecodes247">Github</a>
-            <a href="www.linkedin.com/in/gbalamprince">LinkedIn</a>
-            <a href="www.twitter.com/gbalamprince">Twitter</a>
-            <a href="www.hashnode.com/gbalamprince">Hashnode</a>
+            <a href="https://www.github.com/princecodes247">Github</a>
+            <a href="https://www.linkedin.com/in/gbalamprince">LinkedIn</a>
+            <a href="https://www.twitter.com/gbalamprince">Twitter</a>
+            <a href="https://www.hashnode.com/gbalamprince">Hashnode</a>
           </div>
           <a href="mailto:princecodes247@gmail.com">Write an Email</a>
         </div>
@@ -106,7 +92,16 @@ export default {
   name: "IndexPage",
   data() {
     return {
-      message: 0,
+      projects: [
+        {
+          name: "Veldora",
+          desc: "A showcase of my work",
+        },
+        {
+          name: "FirstTime2020",
+          desc: "A showcase of my work",
+        },
+      ],
     };
   },
 };
