@@ -166,7 +166,7 @@
       </section>
       <footer>Designed and developed by Prince Codes Version 2022</footer>
     </article>
-    <aside class="">Links</aside>
+    <aside class="">Lin</aside>
     <div class="main_background">
       <div class="main_background__shape"></div>
     </div>

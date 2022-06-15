@@ -159,6 +159,7 @@ aside {
     // background: red;
     position: relative;
     margin-top: 0;
+    overflow: hidden;
     .hero__title {
     }
     .hero__name {
@@ -304,6 +305,8 @@ aside {
     $size: 48px;
     width: $size;
     height: $size;
+    min-width: $size;
+    min-height: $size;
     background: $primary-cover-color;
     position: relative;
     border-radius: 999px;
@@ -455,7 +458,7 @@ aside {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // display: none;
+  display: none;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
