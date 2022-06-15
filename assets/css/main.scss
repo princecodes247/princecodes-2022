@@ -8,6 +8,8 @@ $primary-cover-color: #fff2;
 $secondary-cover-color: #ff9800;
 $text-color: #212121;
 
+$breakpoint--small: 460px;
+
 *,
 *::before,
 *::after {
@@ -42,6 +44,9 @@ h1 {
   font-weight: 700;
   margin-bottom: 1rem;
   @media screen and (max-width: 768px) {
+    font-size: 4.5rem;
+  }
+  @media screen and (max-width: $breakpoint--small) {
     font-size: 3rem;
   }
 }
@@ -160,6 +165,12 @@ aside {
     position: relative;
     margin-top: 0;
     overflow: hidden;
+    @media screen and (max-width: $breakpoint--small) {
+      height: 60vh;
+      .scroll_indicator {
+        display: none;
+      }
+    }
     .hero__title {
     }
     .hero__name {
