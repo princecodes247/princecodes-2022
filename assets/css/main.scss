@@ -37,7 +37,7 @@ body {
 }
 
 h1 {
-  font-size: 6.5rem;
+  font-size: 6rem;
   font-family: Syne, sans-serif;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -264,7 +264,7 @@ aside {
   flex-direction: column;
   height: 100%;
   width: 100%;
-
+  // display: none;
   cursor: pointer;
   &:hover &__button::before {
     transform: scale(1);
@@ -455,6 +455,7 @@ aside {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // display: none;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -462,11 +463,23 @@ aside {
     gap: 2em;
   }
   .sect--contact__links {
-    display: flex;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5em;
+    // border: 1px solid red;
+    width: 80%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   a {
+    // background: green;
     color: #fff;
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+    text-decoration: none;
+    // svg
     &:hover {
       color: $primary-color;
     }
