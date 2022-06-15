@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "princecodes-2022",
+    title: "Prince Gbalam",
     htmlAttrs: {
       lang: "en",
     },
