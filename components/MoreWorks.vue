@@ -6,7 +6,7 @@
         <h5>{{ work.title }}</h5>
       </div>
       <div class="more_works__item__date">
-        <p>{{ work.date }}</p>
+        <!-- <p>{{ work.date }}</p> -->
       </div>
       <!-- <div class="more_works__item__points">
                 <ul>

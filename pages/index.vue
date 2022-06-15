@@ -81,8 +81,15 @@
       </section>
       <section class="sect sect--contact">
         <h2>Let's work together</h2>
-        <p>asdmao</p>
-        <a>Write an Email</a>
+        <div class="sect--contact__options">
+          <div class="sect--contact__links">
+            <a href="www.github.com/princecodes247">Github</a>
+            <a href="www.linkedin.com/in/gbalamprince">LinkedIn</a>
+            <a href="www.twitter.com/gbalamprince">Twitter</a>
+            <a href="www.hashnode.com/gbalamprince">Hashnode</a>
+          </div>
+          <a href="mailto:princecodes247@gmail.com">Write an Email</a>
+        </div>
         <form action=""></form>
       </section>
       <footer>Designed and developed by Prince Codes Version 2022</footer>
