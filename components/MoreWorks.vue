@@ -1,6 +1,6 @@
 
 <template>
-  <div :[attributeName]="url" class="more_works">
+  <div class="more_works">
     <div class="more_works__item" v-for="work in works">
       <div class="more_works__item__title">
         <h5>{{ work.title }}</h5>

@@ -1,5 +1,5 @@
-<template>
-  <main class="dark main">
+<template id="smooth-wrapper">
+  <main id="smooth-content" class="dark main">
     <aside class="indicator">Indi</aside>
     <article class="">
       <Header />
@@ -174,6 +174,9 @@
 </template>
 
 <script>
+
+// don't forget to register plugins
+
 export default {
   name: "IndexPage",
   //   computed: {
@@ -187,6 +190,14 @@ export default {
   //     return require(`../assets/doggos/${fileName}.jpg`) // the module request
   //   }
   // },
+
+  mounted() {
+    this.$ScrollSmoother.create({
+  smooth: 1,               // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true,           // looks for data-speed and data-lag attributes on elements
+  smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});
+  },
   data() {
     return {
       projects: [

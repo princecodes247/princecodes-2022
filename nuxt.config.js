@@ -32,24 +32,19 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    [
-      "@nuxtjs/google-fonts",
-      {
-        googleFonts: {
-          families: {
-            Roboto: true,
-            "Josefin+Sans": true,
-            Lato: [100, 300],
-            Raleway: {
-              wght: [100, 400],
-              ital: [100],
-            },
-          },
-        },
-      },
-    ],
-  ],
+
+  buildModules: ["nuxt-gsap-module"],
+
+  gsap: {
+    /* Module Options */
+    extraPlugins: {
+      scrollTo: true,
+      scrollTrigger: true,
+    },
+    clubPlugins: {
+      scrollSmoother: true,
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
